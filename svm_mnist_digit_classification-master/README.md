@@ -145,8 +145,6 @@ full RBF kernel, linear SVC, and linear SVC with two kernel approximation
 Nystroem and Fourier.
 
 
-
-
 ## Further improvements
  
 * Augmenting the training set with artificial samples

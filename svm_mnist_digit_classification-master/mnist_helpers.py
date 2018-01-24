@@ -1,8 +1,5 @@
 
-# Standard scientific Python imports
-import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize
-import numpy as np
+
 
 def show_some_digits(images, targets, sample_size=24, title_text='Digit {}' ):
     '''
