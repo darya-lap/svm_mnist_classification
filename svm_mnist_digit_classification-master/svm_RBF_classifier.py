@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import datetime as dt
 import csv
+from http.server import HTTPServer, CGIHTTPRequestHandler
 
 
 def main():
@@ -33,6 +34,9 @@ def main():
     # full dataset classification
     # split data to train and test
     # from sklearn.cross_validation import train_test_split
+    server_address = ("", 8000)
+    httpd = HTTPServer(server_address, CGIHTTPRequestHandler)
+    httpd.serve_forever()
 
     all_variables = scipy.io.loadmat('data_MNIST.mat')
     X_test = np.array(all_variables['Xtest'])
