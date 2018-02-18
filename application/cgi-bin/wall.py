@@ -44,22 +44,58 @@ pattern = '''
 <head>
 <meta charset="utf-8">
 <title>Стена</title>
+  <script type="text/javascript" src="/js/drawing.js"></script>
+
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
+
+<div class="container-fluid">
+      <div class = "row" style="background: black;">
+          <div class = "col-md-1 col-sm-2 col-xs-3 text-left">
+            <div class = "row">
+                <div class = "col-md-offset-2 col-md-8 logo"></div>
+            </div>
+          </div>
+          <div class = "col-md-10 col-sm-9 col-xs-7 center">
+            <p class="page_name">Handwritten Calculator</p>
+          </div>
+          <div class = "col-md-1 col-sm-1 col-xs-2 text-right" ></div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 center">
+            <div id="canvasDiv"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-4 col-md-4 center">
+            
+        </div>
+      </div>
+</div>
     Форма логина и регистрации. При вводе несуществующего имени зарегистрируется новый пользователь.
-    <form action="/cgi-bin/wall.py">
-        Логин: <input type="text" name="login">
-        Пароль: <input type="password" name="password">
-        <input type="hidden" name="action" value="login">
-        <input type="submit">
-    </form>
+    <div class='testdiv'>
+        <form action="/cgi-bin/wall.py">
+            Логин: <input type="text" name="login">
+            Пароль: <input type="password" name="password">
+            <input type="hidden" name="action" value="login">
+            <input type="submit">
+        </form>
+    </div>
 
     {posts}
 
     {publish}
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/bootstrap.js"></script>
+
 </body>
 </html>
 '''
+
 
 if user is not None:
     pub = '''

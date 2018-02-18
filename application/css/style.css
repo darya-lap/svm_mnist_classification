@@ -1,0 +1,27 @@
+.testdiv{
+    background: #ff4e76;
+}
+
+.logo{
+    background-image: url("../images/logo.png");
+    background-size: cover;
+    height: 44px;
+    width: 47px;
+    margin-top: 7.5px;
+}
+
+.page_name{
+    font-size: 30px;
+    color: #fdfdfddb;
+    text-align: center;
+    padding-top:7px;
+}
+
+#drawing-canvas{
+    margin-top:10px;
+    /*background: #c5d7e8;*/
+    background-image: url("../images/sheet.png");
+    background-size: 30%;
+    width:100%;
+    height: 250px;
+}
