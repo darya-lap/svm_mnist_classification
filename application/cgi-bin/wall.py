@@ -75,11 +75,11 @@ pattern = '''
       </div>
       <div class="row">
         <div class="col-md-offset-4 col-md-4 center">
-            
+            <button id="clearCanvasSimple" type="button">Clear</button>
         </div>
       </div>
 </div>
-    Форма логина и регистрации. При вводе несуществующего имени зарегистрируется новый пользователь.
+    <!--Форма логина и регистрации. При вводе несуществующего имени зарегистрируется новый пользователь.
     <div class='testdiv'>
         <form action="/cgi-bin/wall.py">
             Логин: <input type="text" name="login">
@@ -91,7 +91,7 @@ pattern = '''
 
     {posts}
 
-    {publish}
+    {publish}-->
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/js/bootstrap.js"></script>

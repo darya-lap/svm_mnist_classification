@@ -1,7 +1,7 @@
 var canvas;
 var context;
-var canvasWidth = 490;
-var canvasHeight = 220;
+var canvasWidth = 620;
+var canvasHeight = 300;
 var padding = 25;
 
 var clickX_simple = [];
@@ -27,9 +27,9 @@ function prepareSimpleCanvas()
 	// Create the canvas (Neccessary for IE because it doesn't know what a canvas element is)
 	var canvasDiv = document.getElementById('canvasSimpleDiv');
 	canvas_simple = document.createElement('canvas');
-	canvas_simple.setAttribute('width', 'inherit');
-	canvas_simple.setAttribute('height', '300px');
 	canvas_simple.setAttribute('id', 'canvasSimple');
+	canvas_simple.setAttribute('width',canvasWidth);
+	canvas_simple.setAttribute('height', canvasHeight);
 	canvasDiv.appendChild(canvas_simple);
 	if(typeof G_vmlCanvasManager != 'undefined') {
 		canvas_simple = G_vmlCanvasManager.initElement(canvas_simple);
@@ -113,7 +113,11 @@ function addClickSimple(x, y, dragging)
 
 function clearCanvas_simple()
 {
+    var canvas1 = document.getElementById('canvasSimple');
+    var dataURL = canvas1.toDataURL();
+    console.log(dataURL);
 	context_simple.clearRect(0, 0, canvasWidth, canvasHeight);
+
 }
 
 function redrawSimple()
@@ -121,11 +125,9 @@ function redrawSimple()
 	clearCanvas_simple();
 
 	var radius = 5;
-	context_simple.strokeStyle = "#16a028";
+	context_simple.strokeStyle = "#1b274d";
 	context_simple.lineJoin = "round";
 	context_simple.lineWidth = radius;
-
-
 
 	for(var i=0; i < clickX_simple.length; i++)
 	{

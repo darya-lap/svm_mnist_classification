@@ -20,4 +20,6 @@
 #canvasSimpleDiv{
     background-image: url("../images/sheet.png");
     background-size: 30%;
+    width: 620px;
+    height: 300px;
 }
