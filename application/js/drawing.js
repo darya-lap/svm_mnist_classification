@@ -1,15 +1,4 @@
-// context = document.getElementById('canvasInAPerfectWorld').getContext("2d");
-
-var canvasDiv = document.getElementById('canvasDiv');
-canvas = document.createElement('canvas');
-canvas.setAttribute('width', '400');
-canvas.setAttribute('height', '200');
-canvas.setAttribute('id', 'canvas');
-canvasDiv.appendChild(canvas);
-if(typeof G_vmlCanvasManager != 'undefined') {
-	canvas = G_vmlCanvasManager.initElement(canvas);
-}
-context = canvas.getContext("2d");
+context = document.getElementById('drawing-canvas').getContext("2d");
 
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
@@ -35,9 +24,9 @@ $('#canvas').mouseleave(function(e){
   paint = false;
 });
 
-var clickX = new Array();
-var clickY = new Array();
-var clickDrag = new Array();
+var clickX = [];
+var clickY = [];
+var clickDrag = [];
 var paint;
 
 function addClick(x, y, dragging)
@@ -46,6 +35,7 @@ function addClick(x, y, dragging)
   clickY.push(y);
   clickDrag.push(dragging);
 }
+
 
 function redraw(){
   context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
@@ -66,4 +56,3 @@ function redraw(){
      context.stroke();
   }
 }
-

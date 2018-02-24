@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 import cgi
 import html
 import http.cookies
 import os
 
 from _wall import Wall
+
 wall = Wall()
 
 cookie = http.cookies.SimpleCookie(os.environ.get("HTTP_COOKIE"))
@@ -44,15 +46,16 @@ pattern = '''
 <head>
 <meta charset="utf-8">
 <title>Стена</title>
-  <script type="text/javascript" src="/js/drawing.js"></script>
 
+  
 <link href="/css/bootstrap.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
+
 </head>
 <body>
 
 <div class="container-fluid">
-      <div class = "row" style="background: black;">
+      <div class = "row" style="background: black;" id="topOffset">
           <div class = "col-md-1 col-sm-2 col-xs-3 text-left">
             <div class = "row">
                 <div class = "col-md-offset-2 col-md-8 logo"></div>
@@ -64,9 +67,10 @@ pattern = '''
           <div class = "col-md-1 col-sm-1 col-xs-2 text-right" ></div>
       </div>
       
-      <div class="row">
-        <div class="col-md-offset-3 col-md-6 center">
-            <div id="canvasDiv"></div>
+      <div class="row" style="padding-top:10px">
+        <div class="col-md-3" id="leftOffset"></div>
+        <div class="col-md-6 center">
+            <div id="canvasSimpleDiv"></div>
         </div>
       </div>
       <div class="row">
@@ -92,10 +96,13 @@ pattern = '''
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/js/bootstrap.js"></script>
 
-</body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <!--[if IE]><script type="text/javascript" src="/js/excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="/js/simple.js"></script>
+</body>  
+
 </html>
 '''
-
 
 if user is not None:
     pub = '''
