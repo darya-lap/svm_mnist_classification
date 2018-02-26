@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 import cgi
 import html
 import http.cookies
 import os
-import cv2
 
 from _wall import Wall
 
@@ -54,7 +52,6 @@ pattern = '''
 
 </head>
 <body>
-
 <div class="container-fluid">
       <div class = "row" style="background: black;" id="topOffset">
           <div class = "col-md-1 col-sm-2 col-xs-3 text-left">
