@@ -44,7 +44,7 @@ pattern = '''
 <html>
 <head>
 <meta charset="utf-8">
-<title>Стена</title>
+<title>Handwriting Calculator</title>
 
   
 <link href="/css/bootstrap.css" rel="stylesheet">
