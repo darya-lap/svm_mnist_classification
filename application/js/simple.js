@@ -114,7 +114,7 @@ function addClickSimple(x, y, dragging)
 function clearCanvas_simple()
 {
     var canvas1 = document.getElementById('canvasSimple');
-    var dataURL = canvas1.toDataURL();
+    var dataURL = canvas1.toDataURL("image/jpeg");
     console.log(dataURL);
 	context_simple.clearRect(0, 0, canvasWidth, canvasHeight);
 
@@ -125,7 +125,7 @@ function redrawSimple()
 	clearCanvas_simple();
 
 	var radius = 5;
-	context_simple.strokeStyle = "#1b274d";
+	context_simple.strokeStyle = "#000000";
 	context_simple.lineJoin = "round";
 	context_simple.lineWidth = radius;
 

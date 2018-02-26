@@ -6,6 +6,7 @@ import cgi
 import html
 import http.cookies
 import os
+import cv2
 
 from _wall import Wall
 

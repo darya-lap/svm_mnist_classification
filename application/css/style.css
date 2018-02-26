@@ -23,3 +23,9 @@
     width: 620px;
     height: 300px;
 }
+
+#sketch-container {
+  background: #EAEAEA;
+  width: 960px;
+  height: 500px;
+}
